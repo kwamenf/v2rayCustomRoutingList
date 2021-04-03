@@ -1,40 +1,84 @@
 [
-{
-    "outboundTag": "proxy",
-    "domain": [
-      "domain:example.com",
-      "domain:example2.com"
+    {
+        "outboundTag": "proxy",
+        "domain": [
+          "domain:example.com",
+          "domain:example2.com"
+        ]
+      },
+      {
+            "type": "field",
+            "port": "",
+            "outboundTag": "block",
+            "domain": [
+                "geosite:category-ads-all"
+            ]
+        },
+        {
+            "type": "field",
+            "port": "",
+            "outboundTag": "proxy",
+            "domain": [
+                "geosite:tld-!cn",
+                "geosite:gfw",
+                "geosite:greatfire"
+            ]
+        },
+        {
+            "type": "field",
+            "port": "",
+            "outboundTag": "proxy",
+            "ip": [
+                "1.1.1.1/32",
+                "1.0.0.1/32",
+                "8.8.8.8/32",
+                "8.8.4.4/32"
+            ]
+        },
+        {
+            "type": "field",
+            "port": "",
+            "outboundTag": "proxy",
+            "ip": [
+                "geoip:ae",
+                "geoip:au",
+                "geoip:br",
+                "geoip:ca",
+                "geoip:de",
+                "geoip:dk",
+                "geoip:es",
+                "geoip:fi",
+                "geoip:fr",
+                "geoip:gb",
+                "geoip:gr",
+                "geoip:hk",
+                "geoip:id",
+                "geoip:il",
+                "geoip:in",
+                "geoip:iq",
+                "geoip:ir",
+                "geoip:it",
+                "geoip:jp",
+                "geoip:kr",
+                "geoip:mo",
+                "geoip:my",
+                "geoip:nl",
+                "geoip:no",
+                "geoip:nz",
+                "geoip:ph",
+                "geoip:ru",
+                "geoip:sa",
+                "geoip:sg",
+                "geoip:th",
+                "geoip:tr",
+                "geoip:tw",
+                "geoip:us",
+                "geoip:vn"
+            ]
+        },
+        {
+            "type": "field",
+            "port": "0-65535",
+            "outboundTag": "direct"
+        }
     ]
-  },
-  {
-		"type": "field",
-		"port": "",
-		"outboundTag": "block",
-		"domain": [
-			"geosite:category-ads-all"
-		]
-	},
-	{
-		"type": "field",
-		"port": "",
-		"outboundTag": "proxy",
-		"domain": [
-			"geosite:tld-!cn",
-            		"geosite:gfw",
-            		"geosite:greatfire"
-		]
-	},
-	{
-		"type": "field",
-		"port": "",
-		"outboundTag": "proxy",
-		"ip": [
-			"geoip:telegram"
-		]
-	},
-	{
-		"type": "field",
-		"port": "0-65535",
-		"outboundTag": "direct"
-	}
-]
