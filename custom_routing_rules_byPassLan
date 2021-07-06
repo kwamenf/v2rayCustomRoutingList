@@ -10,7 +10,14 @@
       "type": "field",
       "outboundTag": "block",
       "domain": [
-        "geosite:category-ads-all"
+        "geosite:category-ads-all",
+        "license-api.ccleaner.com",
+        "analytics.ff.avast.com",
+        "ipm-provider.ff.avast.com",
+        "license.piriform.com",
+        "shepherd.ff.avast.concc.avast.com",
+        "ncc.avast.com.edgesuite.net",
+        "ip-info.ff.avast.com"
       ]
     },
     {
