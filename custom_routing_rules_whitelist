@@ -1,41 +1,56 @@
 [
-    {
-      "outboundTag": "direct",
-      "domain": [
-        "domain:example.com",
-        "domain:example2.com"
-      ]
-    },
-    {
-      "type": "field",
-      "outboundTag": "block",
-      "domain": [
-        "geosite:category-ads-all"
-      ]
-    },
-    {
-      "type": "field",
-      "outboundTag": "direct",
-      "domain": [
-        "geosite:cn",
-        "geosite:private",
-        "geosite:apple-cn",
-        "geosite:google-cn",
-        "geosite:tld-cn",
-        "geosite:category-games@cn"
-      ],
-      "ip": [
-        "223.5.5.5/32",
-        "119.29.29.29/32",
-        "180.76.76.76/32",
-        "114.114.114.114/32",
-        "geoip:private",
-        "geoip:cn"
-      ]
-    },
-    {
-      "type": "field",
-      "port": "0-65535",
-      "outboundTag": "proxy"
-    }
-  ]
+  {
+    "outboundTag": "direct",
+    "domain": [
+      "domain:example.com",
+      "domain:example2.com"
+    ]
+  },
+  {
+    "type": "field",
+    "outboundTag": "block",
+    "domain": [
+      "geosite:category-ads-all",
+      "license-api.ccleaner.com",
+      "analytics.ff.avast.com",
+      "ipm-provider.ff.avast.com",
+      "license.piriform.com",
+      "shepherd.ff.avast.concc.avast.com",
+      "ncc.avast.com.edgesuite.net",
+      "ip-info.ff.avast.com"
+    ]
+  },
+  {
+    "type": "field",
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:private",
+      "geosite:apple@cn",
+      "geosite:google@cn",
+      "geosite:tld-cn"
+    ]
+  },
+  {
+    "type": "field",
+    "outboundTag": "proxy",
+    "domain": [
+      "geosite:geolocation-!cn"
+    ]
+  },
+  {
+    "type": "field",
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:private",
+      "geoip:cn"
+    ],
+    "domain": [
+      "geosite:cn"
+    ]
+  },
+  {
+    "type": "field",
+    "port": "0-65535",
+    "outboundTag": "proxy"
+  }
+]
